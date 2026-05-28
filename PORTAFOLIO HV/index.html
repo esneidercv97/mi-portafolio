@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Esneider Correa Velez</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header{
+            background: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1{
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p{
+            font-size: 18px;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        section{
+            background: white;
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            color: #0d6efd;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 5px;
+        }
+
+        ul{
+            margin-left: 20px;
+        }
+
+        .contacto p{
+            margin-bottom: 10px;
+        }
+
+        footer{
+            text-align: center;
+            padding: 20px;
+            background: #0d6efd;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #0d6efd;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover{
+            background: #084298;
+        }
+
+        /* BOTON PDF */
+        .pdf-container{
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* CONFIGURACION PARA IMPRESION */
+        @media print {
+
+            .pdf-container{
+                display: none;
+            }
+
+            body{
+                background: white;
+            }
+
+            section{
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Esneider Correa Velez</h1>
+        <p>Estudiante de Tecnología en Gestión Administrativa</p>
+    </header>
+
+    <!-- BOTON PDF -->
+    <div class="pdf-container">
+        <button class="btn" onclick="generarPDF()">
+            Descargar Portafolio en PDF
+        </button>
+    </div>
+
+    <div class="container">
+
+        <!-- SOBRE MI -->
+        <section>
+            <h2>Sobre Mí</h2>
+
+            <p>
+                Estudiante de segundo semestre en Tecnología en Gestión 
+                Administrativa en ITM, con conocimientos en Excel, experiencia 
+                en manejo de SAP y creación de macros.
+            </p>
+
+            <br>
+
+            <p>
+                Abierto al aprendizaje, al desarrollo personal y profesional, 
+                con disposición para aprender sobre manejo de personal y roles 
+                de liderazgo.
+            </p>
+        </section>
+
+        <!-- INFORMACION DE CONTACTO -->
+        <section class="contacto">
+            <h2>Información de Contacto</h2>
+
+            <p><strong>Correo:</strong> esneidercv97@gmail.com</p>
+
+            <p><strong>Teléfono:</strong> 3218815962</p>
+
+            <a href="mailto:esneidercv97@gmail.com" class="btn">
+                Contactarme
+            </a>
+        </section>
+
+        <!-- ESTUDIOS -->
+        <section>
+            <h2>Estudios Académicos</h2>
+
+            <ul>
+                <li>
+                    Tecnología en Gestión Administrativa - ITM
+                    <br>
+                    Actualmente cursando segundo semestre.
+                </li>
+            </ul>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section>
+            <h2>Habilidades</h2>
+
+            <ul>
+                <li>Manejo de Excel</li>
+                <li>Creación de Macros en Excel VBA</li>
+                <li>Manejo de SAP</li>
+                <li>Trabajo en equipo</li>
+                <li>Aprendizaje continuo</li>
+                <li>Liderazgo y desarrollo personal</li>
+            </ul>
+        </section>
+
+        <!-- EXPERIENCIA -->
+        <section>
+            <h2>Experiencia Laboral</h2>
+
+            <h3>COLDEPLAST S.A.S</h3>
+
+            <p>
+                <strong>Cargo:</strong> Operador Tamboreador
+            </p>
+
+            <p>
+                <strong>Fecha:</strong> Noviembre 2022 - Actualmente
+            </p>
+
+            <br>
+
+            <h3>Operador de Telar Circular Especial</h3>
+
+            <p>
+                <strong>Fecha:</strong> 5 Julio 2016 - 14 Julio 2022
+            </p>
+
+            <p>
+                Funciones adicionales como empatador y manejo de 
+                telares gran formato.
+            </p>
+        </section>
+
+    </div>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <p>
+            © 2026 - Portafolio de Esneider Correa Velez
+        </p>
+    </footer>
+
+    <!-- SCRIPT PARA GENERAR PDF -->
+    <script>
+
+        function generarPDF() {
+
+            window.print();
+
+        }
+
+    </script>
+
+</body>
+</html>
